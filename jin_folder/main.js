@@ -11,7 +11,7 @@ function templateHTML(title, list, body){
     <meta charset="utf-8">
   </head>
   <body>
-    <h1><a href="/">WEB</a></h1>
+    <h1><a href="/">WEB2</a></h1>
     ${list}
     ${body}
   </body>
@@ -55,8 +55,9 @@ var app = http.createServer(function(request,response){
           title = queryData.id;
 
           fs.readFile(`data/${title}`,'utf8', function (err,description){
-            var template =templateHTML(title, list,`<h2>${title}</h2>${description}`);
             var list = templatelist(filelist);
+            var template =templateHTML(title, list,`<h2>${title}</h2>${description}`);
+            
             response.writeHead(200); // 파일을 성공적으로 전달
             response.end(template);
           });
