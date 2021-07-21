@@ -2,34 +2,8 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 var qs = require('querystring');
+var template = require('./lib/template.js');
 
-var template = {
-  html : function (title, list, body, control){
-    return `
-    <!doctype html>
-    <html>
-    <head>
-      <title>WEB1 - ${title}</title>
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <h1><a href="/">WEB2</a></h1>
-      ${list}
-      ${control}
-      ${body}
-    </body>
-    </html>
-    `;
-  },
-  list : function templatelist(filelist){
-    var list = '<ul>';
-    for(var i=0;i<filelist.length;i++){
-      list += `<li><a href="/?id=${filelist[i]}">${filelist[i]}</a></li>`
-    }
-    list += '</ul>';
-    return list;
-  }
-}
 
 var app = http.createServer(function(request,response){
     var _url = request.url;
@@ -61,8 +35,8 @@ var app = http.createServer(function(request,response){
           title = queryData.id;
 
           fs.readFile(`data/${title}`,'utf8', function (err,description){
-            var list = templatelist(filelist);
-            var template =templateHTML(title, list,
+            var list = template.list(filelist);
+            var html =template.html(title, list,
               `<h2>${title}</h2>${description}`,
               ` <a href="/create"> create </a> 
                 <a href="/update?id=${title}"> update </a>
@@ -74,7 +48,7 @@ var app = http.createServer(function(request,response){
               );
             
             response.writeHead(200); // 파일을 성공적으로 전달
-            response.end(template);
+            response.end(html);
           });
         });
       }
