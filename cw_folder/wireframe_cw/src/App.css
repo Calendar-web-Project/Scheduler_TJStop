@@ -1,0 +1,68 @@
+:root {
+  /* color */
+  --color-main: #FF7449;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-border: #949494;
+
+  /* size */
+  --base-space: 8px;
+  --size-border: 4px;
+  --size-button: 60px;
+  --size-thumnail: 50px;
+  --font-size: 18px;
+}
+
+/* basic setting */
+.container{padding: 5vh; box-sizing: border-box;}
+
+/* side */
+.side{position: relative; width: 320px; background-color: #f9f9f9; max-height: 100%;}
+.side .container > div{
+  border-bottom: 1px solid var(--color-border);
+}
+.side .container > div:last-child{border:none}
+.side .container > div h3{left: 8px;}
+
+/* side_user */
+
+
+/* side_todayevent */
+.side .todayevent{margin: 3vh 0;}
+.side .todayevent h3{position: relative; font-weight: 500; font-size: 24px;}
+.side .todayevent h3::after{
+  content: ''; position: absolute; left: 0; bottom: 5px;
+  width: 70%; height: 10px; background-color: rgba(255, 116, 73, 0.3);
+}
+.side .todayevent ul{margin: 1vh 0;}
+.side .todayevent ul li{
+  width: 100%; padding: 3px 18px; background-color: #fff; border-radius: 16px; margin-bottom: 5px;
+  font-size: 14px;
+}
+.side .todayevent ul li.holiday{color: #E83B3C;}
+.side .todayevent a{display: inline-block; width: 100%; text-align: center; margin: 0 0 3vh 0;}
+
+
+/* side_memo */
+.side .memo{position: absolute; margin-top: 3vh;}
+.side .memo h3{
+  position: absolute; top: -16px;
+  font-size: 24px;
+}
+.side .memo h3 label{}
+.side .memo textarea{border: none; width: 100%; border-radius: 10px; padding: 24px; outline: none; resize: none;}
+
+
+/* side_logout */
+.side .logout{
+  position: absolute; bottom: 0; width: 100%; height: 73px; padding: 13px 67px;
+  font-size: 34px; font-weight: bold;
+  color: #fff; background-color: var(--color-main);
+  cursor: pointer;
+  }
+/* 
+.App{}
+
+.side{width: 200px; background-color: #f9f9f9;} */
+
+
