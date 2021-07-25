@@ -1,0 +1,10 @@
+.side .user{}
+.side .user .user_info{width: 100%; display: flex;}
+.side .user .user_info .user_pic{width: 90px; height: 90px; border-radius: 30%; background-color:var(--color-main)}
+.side .user .user_info .user_name{text-align: center; padding: 2vh 8px; font-size: 20px; line-height: 24px;}
+
+.side .user .user_slobox{position: relative; width: 100%; height: 5vh; display: flex; margin: 2vh 0;}
+.side .user .user_slobox p{position: absolute; width: 1vw; font-weight: bold;}
+.side .user .user_slobox p.firstp{left: 0;}
+.side .user .user_slobox p.lastp{right: 0; bottom: 0;}
+.side .user .user_slobox .user_slobox_slo{width: 100%; margin: auto 1vw; text-align: center;}
