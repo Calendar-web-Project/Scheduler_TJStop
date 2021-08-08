@@ -4,7 +4,7 @@ const UserList = ({users}) => {
     console.log(users);
     return(
         <div>
-            {users[0].name}
+            {users.name}
         </div>
     );
 };
