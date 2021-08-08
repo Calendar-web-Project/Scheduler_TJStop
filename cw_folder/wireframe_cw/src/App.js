@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './reset.css';
 import './App.css';
 import User from './user';
+import Page_animate from './components/page_animate';
+
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
         <div className="logout">Logout</div>
       </div>
       <div className="main">
-        <div className="container"></div>
+        <div className="container">
+          <Page_animate></Page_animate>
+        </div>
       </div>
     </div>
   );

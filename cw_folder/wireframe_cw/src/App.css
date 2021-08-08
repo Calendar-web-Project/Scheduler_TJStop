@@ -14,7 +14,7 @@
 }
 
 /* basic setting */
-.container{padding: 5vh; box-sizing: border-box;}
+.container{position: relative; padding: 5vh; box-sizing: border-box;}
 
 /* side */
 .side{position: relative; width: 320px; background-color: #f9f9f9; max-height: 100%;}
@@ -64,5 +64,7 @@
 .App{}
 
 .side{width: 200px; background-color: #f9f9f9;} */
+
+
 
 

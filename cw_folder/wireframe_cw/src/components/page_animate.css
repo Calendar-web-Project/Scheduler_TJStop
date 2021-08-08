@@ -1,0 +1,6 @@
+/* page animate */
+div img{position: absolute; width: 400px; transform: skew(0deg, -10deg); box-shadow: -3px -3px 20px #eee;}
+div img.page_one{left: 110px; top: 100px; z-index: 10;}
+div img.page_two{left: 300px; top:200px; z-index: 20;}
+div img.page_three{left: 110px; top: 350px; z-index: 15;}
+
