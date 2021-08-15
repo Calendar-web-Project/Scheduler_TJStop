@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './reset.css';
 import './App.css';
 import User from './user';
-import Page_animate from './components/page_animate';
-
+import WEEKCOMP from './components/weekcomp';
+// import Page_animate from './components/page_animate';
 
 function App() {
   return (
@@ -18,7 +17,7 @@ function App() {
               <li>김주빈 생일</li>
               <li>김재욱 생일</li>
             </ul>
-            <a>upcoming</a>
+            <a href="#">upcoming</a>
           </div>
           <div className="memo">
             <h3><label for="memo">Memo</label></h3>
@@ -30,7 +29,10 @@ function App() {
       </div>
       <div className="main">
         <div className="container">
-          <Page_animate></Page_animate>
+          <WEEKCOMP></WEEKCOMP>
+          <WEEKCOMP></WEEKCOMP>
+          <WEEKCOMP></WEEKCOMP>
+          <WEEKCOMP></WEEKCOMP>
         </div>
       </div>
     </div>

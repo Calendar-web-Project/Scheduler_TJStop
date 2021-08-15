@@ -1,0 +1,10 @@
+.week_comp{
+    overflow: hidden; box-sizing: border-box; padding: 14px 44px; background-color: #fff;
+    border-bottom: 1px solid #949494;
+}
+.week_comp .dates{float: left; }
+.week_comp .date{font-size: 24px; font-weight: 800; color: #FF7449;}
+
+.week_comp .lists{float: right;}
+
+.week_comp .tasksicon{width: 24px;}
