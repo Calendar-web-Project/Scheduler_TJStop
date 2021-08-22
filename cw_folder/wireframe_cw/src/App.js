@@ -1,7 +1,8 @@
 import './reset.css';
 import './App.css';
 import User from './user';
-import WEEKCOMP from './components/weekcomp';
+import WEEKSHOW from './components/weekShow';
+
 // import Page_animate from './components/page_animate';
 
 function App() {
@@ -29,10 +30,7 @@ function App() {
       </div>
       <div className="main">
         <div className="container">
-          <WEEKCOMP></WEEKCOMP>
-          <WEEKCOMP></WEEKCOMP>
-          <WEEKCOMP></WEEKCOMP>
-          <WEEKCOMP></WEEKCOMP>
+          <WEEKSHOW></WEEKSHOW>
         </div>
       </div>
     </div>
