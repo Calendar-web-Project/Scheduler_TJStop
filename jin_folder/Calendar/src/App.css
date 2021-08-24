@@ -26,9 +26,10 @@
 
 :root {
   --main-color: #8f9daa;
-  --text-color: #777;
+  --text-color: #949494;
   --text-color-light: #ccc;
-  --border-color: #eee;
+  --concept-color:#FF7449;
+  --border-color:#E0E0E0;
   --bg-color: #f9f9f9;
   --neutral-color: #fff;
 }
@@ -41,9 +42,8 @@
 }
 
 body {
-    font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'NanumGothic';
     font-size: 1em;
-    font-weight: 300;
     line-height: 1.5;
     color: var(--text-color);
     background: var(--bg-color);
@@ -117,6 +117,7 @@ main {
 /* Calendar */
 
 .calendar {
+  border-radius: 16px;
   display: block;
   position: relative;
   width: 100%;
@@ -127,35 +128,38 @@ main {
 .calendar .header {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 115%;
-  padding: 1.5em 0;
-  border-bottom: 1px solid var(--border-color);
+  font-size: 180%;
+  padding: 0.em 0;
+  color: var(--concept-color);
+  /*border-bottom: 1px solid var(--border-color);*/
 }
 
 .calendar .header .icon {
+  transform: scale(1.75);
   cursor: pointer;
-  transition: .15s ease-out;
+  color: var(--text-color);
+  /*transition: .15s ease-out;*/
 }
 
-.calendar .header .icon:hover {
+/*.calendar .header .icon:hover {
   transform: scale(1.75);
   transition: .25s ease-out;
   color: var(--main-color);
-}
+}*/
 
 .calendar .header .icon:first-of-type {
-  margin-left: 1em;
+  padding-left: 160px;
 }
 
 .calendar .header .icon:last-of-type {
-  margin-right: 1em;
+  padding-right: 160px;
 }
 
 .calendar .days {
   text-transform: uppercase;
-  font-weight: 400;
-  color: var(--text-color-light);
-  font-size: 70%;
+  font-weight: 600;
+  color: var(--concept-color);
+  font-size: 80%;
   padding: .75em 0;
   border-bottom: 1px solid var(--border-color);
 }
@@ -176,9 +180,9 @@ main {
 }
 
 .calendar .body .selected {
-  border-left: 10px solid transparent;
-  border-image: linear-gradient(45deg, #1a8fff 0%,#53cbf1 40%);
-  border-image-slice: 1;
+  background: rgba(253, 221, 215, 0.3);
+  border: 2px solid #FDDDD7;
+  color: var(--concept-color);
 }
 
 .calendar .body .row {
@@ -199,7 +203,7 @@ main {
   line-height: 1;
   top: .75em;
   right: .75em;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .calendar .body .disabled {
