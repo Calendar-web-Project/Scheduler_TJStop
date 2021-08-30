@@ -10,18 +10,19 @@ const weekComp = (props) => {
     // const month = today.getMonth()+1;
     // const date = today.getDate();
     const day = today.getDay();
+    let thisMonth = props.daynum.getMonth()+1;
     let thisDate = props.daynum.getDate();
     let thisDay = props.daynum.getDay();
     let whatDay = getDayNumber(thisDay);
 
     let isToday = (day == thisDay)? true : false;
-    console.log(day);
-    console.log(thisDay);
+    //console.log(day);
+    //console.log(thisDay);
 
     return(
         <div className="week_comp">
             <div className="dates">
-                <p className="date">{today.getMonth()+1}월 {thisDate}일 {whatDay}</p>
+                <p className="date">{thisMonth}월 {thisDate}일 {whatDay}</p>
                 <div className={"todayicon" + " " + (isToday? 'right' : 'no')}>Today</div>
             </div>
             <div className="lists">
