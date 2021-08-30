@@ -21,7 +21,7 @@ const weekComp = (props) => {
     return(
         <div className="week_comp">
             <div className="dates">
-                <p className="date">{today.getMonth()}월 {thisDate}일 {whatDay}</p>
+                <p className="date">{today.getMonth()+1}월 {thisDate}일 {whatDay}</p>
                 <div className={"todayicon" + " " + (isToday? 'right' : 'no')}>Today</div>
             </div>
             <div className="lists">
