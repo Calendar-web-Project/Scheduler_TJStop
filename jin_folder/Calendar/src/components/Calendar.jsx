@@ -8,7 +8,7 @@ class Calendar extends React.Component {
   };
 
   renderHeader() {
-    const dateFormat = "MMMM yyyy";
+    const dateFormat = "M월";
 
     return (
       <div className="header row flex-middle">
@@ -28,7 +28,7 @@ class Calendar extends React.Component {
   }
 
   renderDays() {
-    const dateFormat = "dddd";
+    const dateFormat = "dd";
     const days = [];
 
     let startDate = startOfWeek(this.state.currentMonth);
