@@ -159,7 +159,8 @@ main {
   font-weight: 600;
   color: var(--concept-color);
   font-size: 80%;
-  padding: .75em 0;
+  padding-bottom: 20px;
+  padding-top: 30px;
   /* border-bottom: 1px solid var(--border-color); */
 }
 
@@ -171,6 +172,7 @@ main {
   background: var(--neutral-color);
   transition: 0.25s ease-out;
   border-radius: 16px;
+  border: 1px solid var(--border-color);
 }
 
 .calendar .body .cell {
