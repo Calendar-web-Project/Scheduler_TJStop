@@ -4,12 +4,12 @@ import { MdAdd } from 'react-icons/md';
 import { useTodoDispatch, useTodoNextId } from '../TodoContext';
 
 const CircleButton = styled.button`
-  background: #38d9a9;
+  background: #FF7449;
   &:hover {
-    background: #63e6be;
+    background: #FF7449;
   }
   &:active {
-    background: #20c997;
+    background: #FF7449;
   }
 
   z-index: 5;
@@ -18,9 +18,9 @@ const CircleButton = styled.button`
   height: 80px;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
+  font-size: 70px;
   position: absolute;
-  left: 50%;
+  left: 100%;
   bottom: 0px;
   transform: translate(-50%, 50%);
   color: white;
@@ -89,6 +89,8 @@ function TodoCreate() {
       todo: {
         id: nextId.current,
         text: value,
+        text2: value,
+        text3: value,
         done: false
       }
     });
@@ -104,13 +106,21 @@ function TodoCreate() {
           <InsertForm onSubmit={onSubmit}>
             <Input
               autoFocus
-              placeholder="할 일을 입력 후, Enter 를 누르세요"
+              placeholder="일정명"
               onChange={onChange}
               value={value}
             />
+            <Input
+              autoFocus
+              placeholder="세부사항"
+            />
+         
+
           </InsertForm>
+          
         </InsertFormPositioner>
       )}
+      
       <CircleButton onClick={onToggle} open={open}>
         <MdAdd />
       </CircleButton>
