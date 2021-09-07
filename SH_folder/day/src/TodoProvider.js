@@ -1,32 +1,32 @@
 import React, { useReducer, createContext, useContext, useRef } from 'react';
 
 const initialTodos = [
-    {
-        id: 1,
-        text: '탈주금지 과제하기',
-        done: true
-      },
-      {
-        id: 2,
-        text: '왜 방학이 끝났지?',
-        done: true
-      },
-      {
-        id: 3,
-        text: '장바구니 담기 추천점',
-        done: false
-      },
-      {
-        id: 4,
-        text: '운동하기',
-        done: false
-      },
-      {
-        id: 5,
-        text: '가만히 있기',
-        done: false
-      }
-    ];
+  {
+    id: 1,
+    text: 'AM 11:00 ~ PM 2:00',
+    done: true
+  },
+  {
+    id: 2,
+    text: '~ 2021.07.11',
+    done: true
+  },
+  {
+    id: 3,
+    text: '하루종일',
+    done: false
+  },
+  {
+    id: 4,
+    text: '내일',
+    done: false
+  },
+  {
+    id: 5,
+    text: '모레',
+    done: false
+  }
+];
 
 function todoReducer(state, action) {
   switch (action.type) {
