@@ -1,0 +1,7 @@
+.weekshowall{display: flex; justify-content: space-around; align-items: center; }
+
+.prearrow{cursor: pointer;}
+
+.nextarrow{cursor: pointer;}
+
+.days{ width: 80%;}
