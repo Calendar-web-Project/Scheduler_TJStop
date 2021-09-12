@@ -41,21 +41,18 @@ export function thisWeek(){
 }
 
 export function thisWeekSub(dayGive){
-    let day = dayGive;
-    console.log(day);
-    let dayOfThismonth = d;
     for(let i = 3; i > 0 ; i--){
         let setDay = new Date(thisDay.setDate(thisDay.getDate()));
         let preDay = new Date(setDay.setDate(setDay.getDate() - i));
         weekArr.push(preDay);
     }
-    weekArr.push(dayOfThismonth);
+    weekArr.push(dayGive);
     for(let i = 1; i <= 3 ; i++){
         let setDay = new Date(thisDay.setDate(thisDay.getDate()));
         let nextDay = new Date(setDay.setDate(setDay.getDate() + i));
         weekArr.push(nextDay);
     }
-    console.log(weekArr);
+    //console.log(weekArr);
     return weekArr;
 
 }
@@ -66,17 +63,17 @@ export function getDayNumber(num){
 }
 
 export function previousWeekShow(){
-    console.log("previous event!!");
+    //console.log("previous event!!");
     let thisweek = weekArr[3];
     weekArr = [];
     thisDay = new Date(thisDay.setDate(thisDay.getDate() - 7));
-    thisWeekSub(thisDay);
+    return thisWeekSub(thisDay);
 
 }
 export function nextWeekShow(){
-    console.log('next event!');
+    //console.log('next event!');
     let thisweek = weekArr[3];
     weekArr = [];
     thisDay = new Date(thisDay.setDate(thisDay.getDate() + 7));
-    thisWeekSub(thisDay);
+    return thisWeekSub(thisDay);
 }

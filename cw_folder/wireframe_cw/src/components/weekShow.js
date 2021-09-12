@@ -5,29 +5,39 @@ import nextBtn from '../img/nextweekbtn.png'
 import preBtn from '../img/preweekbtn.png'
 import './weekshow.css';
 
-// let today = new Date();
-let thisWeekArr = thisWeekSub();
+let today = new Date();
+let thisWeekArr = thisWeekSub(today);
 //console.log(thisWeekArr);
-const weekShow = () => {
-    const [week, setWeek] = useState;
+const WeekShow = () => {
+    let [setweek, weekChange] = useState(thisWeekArr);
+    function preWeekGo(){
+        var newWeek = [...setweek];
+        newWeek = previousWeekShow();
+        weekChange(newWeek);
+    }
+    function nextWeekGo(){
+        var newWeek = [...setweek];
+        newWeek = nextWeekShow();
+        weekChange(newWeek);
+    }
     return(
         <div className="weekshowall">
-            <div className="prearrow" onClick={previousWeekShow}>
+            <div className="prearrow" onClick={preWeekGo}>
                 <img src={preBtn} alt="previous button" className="preweekbtn"></img>
             </div>
             <div className="days">
-                <WEEKCOMP daynum={thisWeekArr[0]}></WEEKCOMP>
-                <WEEKCOMP daynum={thisWeekArr[1]}></WEEKCOMP>
-                <WEEKCOMP daynum={thisWeekArr[2]}></WEEKCOMP>
-                <WEEKCOMP daynum={thisWeekArr[3]}></WEEKCOMP>
-                <WEEKCOMP daynum={thisWeekArr[4]}></WEEKCOMP>
-                <WEEKCOMP daynum={thisWeekArr[5]}></WEEKCOMP>
-                <WEEKCOMP daynum={thisWeekArr[6]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[0]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[1]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[2]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[3]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[4]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[5]}></WEEKCOMP>
+                <WEEKCOMP daynum={setweek[6]}></WEEKCOMP>
             </div>
-            <div className="nextarrow" onClick={nextWeekShow}>
+            <div className="nextarrow" onClick={nextWeekGo}>
                 <img src={nextBtn} alt="next button" className="nextweekbtn"></img>
             </div>
         </div>
     );
 };
-export default weekShow;
+export default WeekShow;

@@ -9,15 +9,16 @@ const weekComp = (props) => {
     // const year = today.getFullYear();
     // const month = today.getMonth()+1;
     // const date = today.getDate();
+    const date = today.getDate();
     const day = today.getDay();
     let thisMonth = props.daynum.getMonth()+1;
     let thisDate = props.daynum.getDate();
     let thisDay = props.daynum.getDay();
     let whatDay = getDayNumber(thisDay);
 
-    let isToday = (day == thisDay)? true : false;
-    //console.log(day);
-    //console.log(thisDay);
+    let isToday = (date == thisDate)? (day == thisDay)? true : false : false;
+    // console.log(date);
+    // console.log(thisDay);
 
     return(
         <div className="week_comp">
